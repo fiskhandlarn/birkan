@@ -4,10 +4,14 @@
 @import 'bootstrap-reboot';
 @import '@fiskhandlarn/revenge.css';
 
+@import 'mixins/visually-hidden';
+
 @import 'settings/variables';
 
 @import 'components/main-app';
 @import 'components/talking-head';
+@import 'components/talking-mouth';
+
 
 // disable revenge.css for bootstrap-responsiveHelper extension
 .ff-ext--bootstrapResponsiveHelper { // stylelint-disable rscss/class-format

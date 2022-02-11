@@ -5,11 +5,10 @@
   position: relative; // anchor for .talking-head
 
   > .talking-head {
-    background: url(/assets/images/head.png) no-repeat;
-    height: percentage(math.div(697px, $orig-height));
+    height: percentage(math.div($head-height, $orig-height));
     left: percentage(math.div(128px, $orig-width));
     position: absolute;
     top: percentage(math.div(23px, $orig-height));
-    width: percentage(math.div(779px, $orig-width));
+    width: percentage(math.div($head-width, $orig-width));
   }
 }
