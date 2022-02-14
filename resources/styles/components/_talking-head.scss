@@ -7,9 +7,9 @@
 
   > .talking-mouth {
     height: percentage(math.div($mouth-height, $head-height));
-    left: percentage(math.div(281, $head-width));
+    left: percentage(math.div(282, $head-width));
     position: absolute;
-    top: percentage(math.div(381, $head-height));
+    top: percentage(math.div(384, $head-height));
     width: percentage(math.div($mouth-width, $head-width));
   }
 }
