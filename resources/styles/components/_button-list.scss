@@ -1,0 +1,22 @@
+@use 'sass:math';
+
+.button-list {
+  display: flex;
+  justify-content: space-between;
+
+  > .b-button {
+    height: percentage(math.div($button-hitarea-height, $orig-height));
+    width: percentage(math.div($button-hitarea-width, $orig-width));
+    margin-bottom: percentage(math.div(11, $orig-height));
+    margin-top: auto;
+
+    &:first-of-type {
+      margin-left: percentage(math.div(30, $orig-width));
+    }
+
+    &:last-of-type {
+      margin-right: percentage(math.div(30, $orig-width));
+    }
+  }
+
+}

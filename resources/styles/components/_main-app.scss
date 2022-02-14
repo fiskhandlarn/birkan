@@ -12,10 +12,8 @@
     width: percentage(math.div($head-width, $orig-width));
   }
 
-  > .b-button {
-    // TODO tmp position:
-    margin-top: 100px;
-    height: percentage(math.div($button-hitarea-height, $orig-height));
-    width: percentage(math.div($button-hitarea-width, $orig-width));
+  > .button-list {
+    width: 100%;
+    height: 100%;
   }
 }
