@@ -8,6 +8,7 @@
 
 @import 'settings/variables';
 
+@import 'components/b-button';
 @import 'components/main-app';
 @import 'components/talking-head';
 @import 'components/talking-mouth';
@@ -24,8 +25,8 @@ body {
   background: #f60;
 
   > .main-app {
-    height: rem($orig-height);
+    height: rem($orig-height * 1px);
     margin: auto;
-    width: rem($orig-width);
+    width: rem($orig-width * 1px);
   }
 }

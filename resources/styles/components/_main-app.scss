@@ -6,9 +6,16 @@
 
   > .talking-head {
     height: percentage(math.div($head-height, $orig-height));
-    left: percentage(math.div(128px, $orig-width));
+    left: percentage(math.div(128, $orig-width));
     position: absolute;
-    top: percentage(math.div(23px, $orig-height));
+    top: percentage(math.div(23, $orig-height));
     width: percentage(math.div($head-width, $orig-width));
+  }
+
+  > .b-button {
+    // TODO tmp position:
+    margin-top: 100px;
+    height: percentage(math.div($button2-height, $orig-height));
+    width: percentage(math.div($button2-width, $orig-width));
   }
 }
