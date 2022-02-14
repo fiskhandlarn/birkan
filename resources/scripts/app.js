@@ -1,3 +1,4 @@
 import '@babel/polyfill';
+import BButton from './b-button.js';
 
-console.log('test');
+BButton.initAll();
