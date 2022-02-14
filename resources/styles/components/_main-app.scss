@@ -1,7 +1,6 @@
 @use 'sass:math';
 
 .main-app {
-  background: #f00;
   position: relative; // anchor for .talking-head
 
   > .talking-head {
