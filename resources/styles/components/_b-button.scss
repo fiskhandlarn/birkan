@@ -38,7 +38,8 @@
     }
 
     &::after {
-      background: #ffff00;
+      background-color: #ffff00;
+      background-repeat: no-repeat;
       bottom: percentage(math.div($button-height - $button-inner-height, $button-height));
       box-shadow: 0 0 0 rem(1px) #000 inset;
       content: '';
@@ -87,6 +88,30 @@
         height: percentage(math.div($button-inner-height, $button-height));
         left: 0;
         width: percentage(math.div($button-inner-width, $button-width));
+      }
+    }
+  }
+
+  &.-bacon {
+    > .title {
+      &::after {
+        background-image: url(/assets/images/bacon.svg);
+      }
+    }
+  }
+
+  &.-beercan {
+    > .title {
+      &::after {
+        background-image: url(/assets/images/beercan.svg);
+      }
+    }
+  }
+
+  &.-birkan {
+    > .title {
+      &::after {
+        background-image: url(/assets/images/birkan.svg);
       }
     }
   }
