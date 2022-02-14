@@ -15,7 +15,7 @@
   > .b-button {
     // TODO tmp position:
     margin-top: 100px;
-    height: percentage(math.div($button2-height, $orig-height));
-    width: percentage(math.div($button2-width, $orig-width));
+    height: percentage(math.div($button-hitarea-height, $orig-height));
+    width: percentage(math.div($button-hitarea-width, $orig-width));
   }
 }

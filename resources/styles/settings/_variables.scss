@@ -5,8 +5,8 @@ $button-height: $button-width * math.div(186, 459.5); // 231*186/459.5=93.5
 $button-inner-width: $button-width - 14; // 231-14=217
 $button-inner-height: $button-height - 14; // 93.5-14=79.5
 $button-padding: 9;
-$button2-width: $button-padding * 2 + $button-inner-width; // 217+9+9=235
-$button2-height: $button-padding * 2 + $button-inner-height; // 79.5+9+9=97.5
+$button-hitarea-width: $button-padding * 2 + $button-inner-width; // 217+9+9=235
+$button-hitarea-height: $button-padding * 2 + $button-inner-height; // 79.5+9+9=97.5
 $head-height: 697;
 $head-width: 779;
 $mouth-height: 96;
