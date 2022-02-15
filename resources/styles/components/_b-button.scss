@@ -58,12 +58,12 @@
   &:hover {
     > .title {
       clip-path: polygon(
-        percentage(1 - math.div(math.div($button-width - $button-inner-width, 2), $button-hitarea-width)) percentage(math.div(math.div($button-height - $button-inner-height, 2), $button-hitarea-height)),
+        percentage(1 - math.div(math.div($button-width - $button-inner-width, 2), $button-hitarea-width)) calc(rem(1px) + percentage(math.div(math.div($button-height - $button-inner-height, 2), $button-hitarea-height))),
         percentage(1 - math.div(math.div($button-width - $button-inner-width, 2), $button-hitarea-width)) percentage(1 - math.div(math.div($button-height - $button-inner-height, 2), $button-hitarea-height)),
         percentage(1 - math.div($button-width - $button-inner-width, $button-hitarea-width)) 100%,
         0 100%,
         0 percentage(math.div($button-height - $button-inner-height, $button-hitarea-height)),
-        percentage(math.div(math.div($button-width - $button-inner-width, 2), $button-hitarea-width)) percentage(math.div(math.div($button-height - $button-inner-height, 2), $button-hitarea-height))
+        percentage(math.div(math.div($button-width - $button-inner-width, 2), $button-hitarea-width)) calc(rem(1px) + percentage(math.div(math.div($button-height - $button-inner-height, 2), $button-hitarea-height)))
       );
 
       &::after {
