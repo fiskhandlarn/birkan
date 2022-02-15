@@ -35,7 +35,7 @@ export default ({ command }) => ({
         appName: 'Birkan',
         background: '#f60',
         theme_color: '#1d1d1d',
-        path: `/themes/assets/`,
+        path: `/assets/`,
         icons: {
           android: true,
           appleIcon: true,
