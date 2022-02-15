@@ -5,7 +5,7 @@
 
   > .talking-head {
     height: percentage(math.div($head-height, $orig-height));
-    left: percentage(math.div(128, $orig-width));
+    left: percentage(math.div(math.div($orig-width - $head-width, $orig-width), 2));
     position: absolute;
     top: percentage(math.div(23, $orig-height));
     width: percentage(math.div($head-width, $orig-width));

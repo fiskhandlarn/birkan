@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-$button-width: 231;
+$button-width: 200;
 $button-height: $button-width * math.div(186, 459.5); // 231*186/459.5=93.5
 $button-inner-width: $button-width - 14; // 231-14=217
 $button-inner-height: $button-height - 14; // 93.5-14=79.5
@@ -12,4 +12,4 @@ $head-width: 779;
 $mouth-height: 96;
 $mouth-width: 145;
 $orig-height: 751;
-$orig-width: 991;
+$orig-width: 800; // originally 991
