@@ -15,4 +15,12 @@
     width: 100%;
     height: 100%;
   }
+
+  > .github-button {
+    height: percentage(math.div(26, $orig-height));
+    position: absolute;
+    right: percentage(math.div(30, $orig-width));
+    top: percentage(math.div(11, $orig-width));
+    width: percentage(math.div(26, $orig-width));
+  }
 }
