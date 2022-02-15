@@ -75,5 +75,6 @@
     // original animation is 42 frames in 22 fps
     animation: mouth-anim (math.div(42, 22) * 1s);
     animation-iteration-count: 1;
+    animation-delay: -630ms;
   }
 }
