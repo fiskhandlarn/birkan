@@ -19,17 +19,19 @@ export default class BButton {
   constructor(domElement) {
     this.element = domElement;
     this.element.addEventListener('mousedown', event => {
-      [...document.querySelectorAll('.talking-mouth')].forEach((element) => {
-        element.classList.remove('-anim');
-      });
-      audio.currentTime = 0; // reset so that browser can play again before it's finished
-      audio.play();
-      window.setTimeout(() => {
-        // browser needs some time before triggering animation again
+      if (event.button === 0) {
         [...document.querySelectorAll('.talking-mouth')].forEach((element) => {
-          element.classList.add('-anim');
+          element.classList.remove('-anim');
         });
-      }, 0);
+        audio.currentTime = 0; // reset so that browser can play again before it's finished
+        audio.play();
+        window.setTimeout(() => {
+          // browser needs some time before triggering animation again
+          [...document.querySelectorAll('.talking-mouth')].forEach((element) => {
+            element.classList.add('-anim');
+          });
+        }, 0);
+      }
     });
   }
 }
