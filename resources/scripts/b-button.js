@@ -22,7 +22,7 @@ export default class BButton {
       [...document.querySelectorAll('.talking-mouth')].forEach((element) => {
         element.classList.remove('-anim');
       });
-      audio.fastSeek(0);
+      audio.currentTime = 0; // reset so that browser can play again before it's finished
       audio.play();
       window.setTimeout(() => {
         // browser needs some time before triggering animation again
