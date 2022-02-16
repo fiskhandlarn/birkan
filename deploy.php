@@ -18,9 +18,11 @@ $rsyncOptions['exclude'] = array_merge($rsyncOptions['exclude'], [
     'composer.json',
     'composer.lock',
     'LICENSE',
+    'node_modules',
     'package-lock.json',
     'package.json',
     'README.md',
+    'vendor',
 ]);
 $rsyncOptions['options'] = array_merge($rsyncOptions['options'], [
     'chown="'. getenv('DEPLOY_CHOWN') . '"',
