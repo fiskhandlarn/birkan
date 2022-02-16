@@ -1,2 +1,4 @@
-node_modules
 /public/assets
+node_modules
+secrets
+vendor

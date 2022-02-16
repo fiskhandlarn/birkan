@@ -1,0 +1,15 @@
+{
+  "name": "fiskhandlarn/birkan",
+  "type": "project",
+  "license": "AGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Oskar Joelson",
+      "email": "oskar@joelson.org"
+    }
+  ],
+  "require-dev": {
+    "deployer/deployer": "^6.8",
+    "deployer/recipes": "^6.2"
+  }
+}
