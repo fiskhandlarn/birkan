@@ -1,5 +1,5 @@
 # birkan
-Bacon or beer can or Birkan‽
+Bacon or beercan or Birkan‽
 
 ## Install
 
