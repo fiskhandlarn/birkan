@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+.talking-head {
+  background-image: url(/assets/images/head.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  > .talking-mouth {
+    height: percentage(math.div($mouth-height, $head-height));
+    left: percentage(math.div(282, $head-width));
+    position: absolute;
+    top: percentage(math.div(384, $head-height));
+    width: percentage(math.div($mouth-width, $head-width));
+  }
+}

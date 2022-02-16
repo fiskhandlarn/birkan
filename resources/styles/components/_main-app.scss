@@ -1,0 +1,26 @@
+@use 'sass:math';
+
+.main-app {
+  position: relative; // anchor for .talking-head
+
+  > .talking-head {
+    height: percentage(math.div($head-height, $orig-height));
+    left: percentage(math.div(math.div($orig-width - $head-width, $orig-width), 2));
+    position: absolute;
+    top: percentage(math.div(23, $orig-height));
+    width: percentage(math.div($head-width, $orig-width));
+  }
+
+  > .button-list {
+    width: 100%;
+    height: 100%;
+  }
+
+  > .github-button {
+    height: percentage(math.div(26, $orig-height));
+    position: absolute;
+    right: percentage(math.div(30, $orig-width));
+    top: percentage(math.div(11, $orig-width));
+    width: percentage(math.div(26, $orig-width));
+  }
+}

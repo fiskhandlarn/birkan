@@ -1,0 +1,118 @@
+@use 'sass:math';
+
+.b-button {
+  background: #000;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative; // anchor for .title
+
+  > .title {
+    bottom: percentage(math.div($button-padding, $button-hitarea-height));
+    clip-path: polygon(
+      100% 0%,
+      100% percentage(1 - math.div($button-height - $button-inner-height, $button-hitarea-height)),
+      percentage(1 - math.div($button-width - $button-inner-width, $button-hitarea-width)) 100%,
+      0 100%,
+      0 percentage(math.div($button-height - $button-inner-height, $button-hitarea-height)),
+      percentage(math.div($button-width - $button-inner-width, $button-hitarea-width)) 0
+    );
+    display: block;
+    height: percentage(math.div($button-height, $button-hitarea-height));
+    left: percentage(math.div($button-padding, $button-hitarea-width));
+    pointer-events: none;
+    position: absolute;
+    text-indent: -99999px;
+    width: percentage(math.div($button-width, $button-hitarea-width));
+
+    &::before {
+      background: linear-gradient(135deg, #00c191 0%,#00c191 50%, #336 50%, #336 100%);
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      padding-bottom: 100%;
+      position: absolute;
+      width: 100%;
+    }
+
+    &::after {
+      background-color: #ffff00;
+      background-repeat: no-repeat;
+      bottom: percentage(math.div($button-height - $button-inner-height, $button-height));
+      box-shadow: 0 0 0 rem(1px) #000 inset;
+      content: '';
+      display: block;
+      height: percentage(math.div($button-inner-height, $button-height));
+      left: percentage(math.div($button-width - $button-inner-width, $button-width));
+      position: absolute;
+      width: percentage(math.div($button-inner-width, $button-width));
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    > .title {
+      clip-path: polygon(
+        percentage(1 - math.div(math.div($button-width - $button-inner-width, 2), $button-hitarea-width)) calc(rem(1px) + percentage(math.div(math.div($button-height - $button-inner-height, 2), $button-hitarea-height))),
+        percentage(1 - math.div(math.div($button-width - $button-inner-width, 2), $button-hitarea-width)) percentage(1 - math.div(math.div($button-height - $button-inner-height, 2), $button-hitarea-height)),
+        percentage(1 - math.div($button-width - $button-inner-width, $button-hitarea-width)) 100%,
+        0 100%,
+        0 percentage(math.div($button-height - $button-inner-height, $button-hitarea-height)),
+        percentage(math.div(math.div($button-width - $button-inner-width, 2), $button-hitarea-width)) calc(rem(1px) + percentage(math.div(math.div($button-height - $button-inner-height, 2), $button-hitarea-height)))
+      );
+
+      &::after {
+        bottom: percentage(math.div(math.div($button-height - $button-inner-height, 2), $button-hitarea-height));
+        left: percentage(math.div(math.div($button-width - $button-inner-width, 2), $button-hitarea-width));
+      }
+    }
+  }
+
+  &:active,
+  &:active:hover {
+    > .title {
+      clip-path: none;
+
+      &::before {
+        content: none;
+        display: none;
+      }
+
+      &::after {
+        bottom: 0;
+        height: percentage(math.div($button-inner-height, $button-height));
+        left: 0;
+        width: percentage(math.div($button-inner-width, $button-width));
+      }
+    }
+  }
+
+  &.-bacon {
+    > .title {
+      &::after {
+        background-image: url(/assets/images/bacon.svg);
+      }
+    }
+  }
+
+  &.-beercan {
+    > .title {
+      &::after {
+        background-image: url(/assets/images/beercan.svg);
+      }
+    }
+  }
+
+  &.-birkan {
+    > .title {
+      &::after {
+        background-image: url(/assets/images/birkan.svg);
+      }
+    }
+  }
+}

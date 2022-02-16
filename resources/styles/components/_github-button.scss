@@ -1,0 +1,24 @@
+.github-button {
+  display: block;
+  border: rem(1px) solid #e7f2f6;
+  border-radius: 100%;
+  padding: rem(2px);
+
+  > svg {
+    display: block;
+    fill: #e7f2f6;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: #fff;
+
+    > svg {
+      fill: #fff;
+    }
+  }
+}

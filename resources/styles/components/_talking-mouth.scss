@@ -1,0 +1,80 @@
+@use 'sass:math';
+
+// 1-14, 0, 73.5, 51
+// 15, -1,41, 76.5, 56
+// 16, -3.25, 79.5, 62
+// 17, -4.62, 82.5, 68
+// 18, -3.25, 80.5, 64
+// 19, -2,25, 78.5, 60
+// 20, -1.41, 76.5, 56
+// 21, -0,54, 74.5, 52,00
+// 22, 0, 72.5, 48,00
+// 23, 0, 75.5, 54,00
+// 24, 0, 77.5, 60
+// 25, 0, 80.5, 66
+// 26, 0, 83.5, 73,00
+// 27, 0, 81.5, 69
+// 28, 0, 80.5, 65
+// 29, 0, 78.5, 62
+// 30, 0, 76.5, 58
+// 31, 0, 75.5, 54
+// 32-42, 0, 73.5, 51
+@keyframes mouth-anim {
+  // 1-13
+  0% {transform: rotate(0deg) translate(0, 0);}
+  // 14/42*100
+  33.333333% {transform: rotate(0deg) translate(0, 0);}
+  // 15/42*100
+  35.714286% {transform: rotate(1.41deg) translate(percentage(math.div(3, $mouth-width)), percentage(math.div(5, $mouth-height)));}
+  // 16/42*100
+  38.095238% {transform: rotate(3.25deg) translate(percentage(math.div(6, $mouth-width)), percentage(math.div(11, $mouth-height)));}
+  // 17/42*100
+  40.47619% {transform: rotate(4.62deg) translate(percentage(math.div(9, $mouth-width)), percentage(math.div(17, $mouth-height)));}
+  // 18/42*100
+  42.857143% {transform: rotate(3.25deg) translate(percentage(math.div(7, $mouth-width)), percentage(math.div(13, $mouth-height)));}
+  // 19/42*100
+  45.238095% {transform: rotate(2.25deg) translate(percentage(math.div(5, $mouth-width)), percentage(math.div(9, $mouth-height)));}
+  // 20/42*100
+  47.619048% {transform: rotate(1.41deg) translate(percentage(math.div(3, $mouth-width)), percentage(math.div(5, $mouth-height)));}
+  // 21/42*100
+  50% {transform: rotate(0.54deg) translate(percentage(math.div(1, $mouth-width)), percentage(math.div(1, $mouth-height)));}
+  // 22/42*100
+  52.380952% {transform: rotate(0deg) translate(percentage(math.div(-1, $mouth-width)), percentage(math.div(-3, $mouth-height)));}
+  // 23/42*100
+  54.761905% {transform: rotate(0deg) translate(percentage(math.div(2, $mouth-width)), percentage(math.div(3, $mouth-height)));}
+  // 24/42*100
+  57.142857% {transform: rotate(0deg) translate(percentage(math.div(4, $mouth-width)), percentage(math.div(9, $mouth-height)));}
+  // 25/42*100
+  59.52381% {transform: rotate(0deg) translate(percentage(math.div(7, $mouth-width)), percentage(math.div(15, $mouth-height)));}
+  // 26/42*100
+  61.904762% {transform: rotate(0deg) translate(percentage(math.div(10, $mouth-width)), percentage(math.div(22, $mouth-height)));}
+  // 27/42*100
+  64.285714% {transform: rotate(0deg) translate(percentage(math.div(8, $mouth-width)), percentage(math.div(18, $mouth-height)));}
+  // 28/42*100
+  66.666667% {transform: rotate(0deg) translate(percentage(math.div(7, $mouth-width)), percentage(math.div(14, $mouth-height)));}
+  // 29/42*100
+  69.047619% {transform: rotate(0deg) translate(percentage(math.div(5, $mouth-width)), percentage(math.div(11, $mouth-height)));}
+  // 30/42*100
+  71.428571% {transform: rotate(0deg) translate(percentage(math.div(3, $mouth-width)), percentage(math.div(7, $mouth-height)));}
+  // 31/42*100
+  73.809524% {transform: rotate(0deg) translate(percentage(math.div(2, $mouth-width)), percentage(math.div(3, $mouth-height)));}
+  // 32/42*100 - 42
+  76.190476% {transform: rotate(0deg) translate(0, 0);}
+}
+
+.talking-mouth {
+  background-image: url(/assets/images/mouth.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  > .title {
+    @include visually-hidden;
+  }
+
+  &.-anim {
+    // original animation is 42 frames in 22 fps
+    animation: mouth-anim (math.div(42, 22) * 1s);
+    animation-iteration-count: 1;
+    animation-delay: -630ms;
+  }
+}
