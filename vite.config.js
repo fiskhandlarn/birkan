@@ -15,11 +15,11 @@ export default ({ command }) => ({
         'resources/styles/app.scss',
       ],
       output: {
-        entryFileNames: `[name]_0.1.js`,
-        chunkFileNames: `[name]_0.1.js`,
+        entryFileNames: `[name]_0.2.js`,
+        chunkFileNames: `[name]_0.2.js`,
         assetFileNames: (assetInfo) => {
           if (assetInfo.name == 'app.css') {
-            return 'app_0.1.css';
+            return 'app_0.2.css';
           }
           return assetInfo.name;
         },
